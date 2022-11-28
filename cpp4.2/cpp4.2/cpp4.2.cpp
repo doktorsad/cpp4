@@ -82,10 +82,11 @@ void bubbleSort(std::vector<Address>& x) {
 int main() {
     setlocale(LC_ALL, "Russian");
     int count;
+    std::string temp;
     std::vector <Address> data;
     std::fstream in("in.txt");
     in >> count;
-    in.seekg(3);
+    getline(in, temp);
     for (int i = 0; i < count; ++i) {
         data.push_back(from_txt(in));
     }
